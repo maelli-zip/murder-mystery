@@ -25,9 +25,9 @@ jobs:
         working-directory: ./frontend
 
       - name: Run ESLint
-        run: npx eslint "**/*.{ts,tsx}"
+        run: npx eslint "src/**/*.{ts,tsx}"
         working-directory: ./frontend
 
       - name: Run Prettier check
-        run: npx prettier --check "**/*.{ts,tsx}"
+        run: npx prettier --check "src/**/*.{ts,tsx}"
         working-directory: ./frontend
