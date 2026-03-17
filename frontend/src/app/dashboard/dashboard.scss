@@ -1,0 +1,17 @@
+.dashboard {
+  padding: 16px;
+}
+
+.dashboard-body {
+  background-color: #dadada75;
+  min-height: 500px;
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 15px;
+}
+
+.story-cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+}
