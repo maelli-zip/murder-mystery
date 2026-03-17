@@ -8,5 +8,6 @@ import { Component, Input, signal } from '@angular/core';
   styleUrl: './card.scss',
 })
 export class Card {
+  @Input() header: string = '';
   @Input() content: string = '';
 }
