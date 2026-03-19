@@ -2,6 +2,8 @@
 
 Murder Mystery or in german: Krimi Dinner
 
+Start of project: 17.03.26
+
 ## About
 
 A murder mystery is an interactive game where you and your guests each take on a role and work together to solve a fictional crime. 
