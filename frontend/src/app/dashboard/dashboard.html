@@ -3,7 +3,7 @@
   <div class="dashboard-body">
     <h1>Overview</h1>
     <div class="story-cards">
-      @for (story of stories(); track story.id) {
+      @for (story of stories$(); track story.id) {
         <app-card
           [header]="story.title"
           [content]="story.description"

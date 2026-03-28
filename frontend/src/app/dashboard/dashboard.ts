@@ -1,9 +1,9 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { Card } from '../shared/card/card';
-import { NavigationBar } from '../navigation-bar/navigation-bar';
-import { StoryService } from '../services/story.service';
-import { Story } from '../models/story.model';
-import { HttpClientModule } from '@angular/common/http';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
+import {Card} from '../shared/card/card';
+import {NavigationBar} from '../navigation-bar/navigation-bar';
+import {StoryService} from '../services/story.service';
+import {Story} from '../models/story.model';
+import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,17 +13,22 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './dashboard.scss'
 })
 export class Dashboard implements OnInit {
+  // services
+  private _storyService = inject(StoryService);
 
-  stories = signal<Story[]>([]);
+  // signals
+  stories$ = signal<Story[]>([]);
+  charsByStory$ = computed(() =>
+    new Map(this.stories$().map(story => [story.id, story.characters]))
+  );
 
-  constructor(private storyService: StoryService) {}
-
+  // lifecycle
   ngOnInit(): void {
-    this.storyService.getAllStories().subscribe({
+    this._storyService.getAllStories().subscribe({
       next: (data) => {
-        console.log("Dashboard initialized with stories: " + data.toString());
-        this.stories.set(data);
-        console.log("Dashboard initialized with stories: " + this.stories.length + " stories loaded." + JSON.stringify(this.stories));
+        this.stories$.set(data);
+        console.log("Stories initialized: " + this.stories$().length + " stories loaded.");
+        // debug: console.log(JSON.stringify(this.stories())
       },
       error: (err) => console.error(err)
     });
