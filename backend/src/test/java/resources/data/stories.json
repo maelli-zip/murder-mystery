@@ -1,0 +1,166 @@
+[
+  {
+    "id": "story-001",
+    "title": "The Blackwood Masquerade",
+    "description": "An invitation to the annual masked ball at Blackwood Manor seemed like an honour — until the clock struck midnight and a body was discovered in the locked study. The doors are sealed, the guests are restless, and the killer is still wearing a mask. Everyone has a secret. Only one has blood on their hands.",
+    "difficulty": "MEDIUM",
+    "characters": [
+      {
+        "id": "char-001",
+        "name": "Lord Blackwood",
+        "role": "Host",
+        "description": "The wealthy owner of the Blackwood estate. Charming on the surface, but rumoured to have dark secrets.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-002",
+        "name": "Lady Evelyn Cross",
+        "role": "Guest",
+        "description": "An aristocrat known for her sharp wit and sharper grudges. Was seen arguing with the victim earlier that evening.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-003",
+        "name": "Inspector Hargrove",
+        "role": "Detective",
+        "description": "The seasoned detective called to the scene. He reveals clues but keeps his conclusions to himself.",
+        "imagePath": null,
+        "isSuspect": false
+      }
+    ],
+    "chapters": [
+      {
+        "order": 1,
+        "title": "The Ball Begins",
+        "narrative": "Guests arrive at the dimly lit Blackwood mansion. Laughter fills the air, but something feels off.",
+        "involvedCharacterIds": ["char-001", "char-002", "char-003"]
+      },
+      {
+        "order": 2,
+        "title": "A Scream in the Dark",
+        "narrative": "The clock strikes midnight. A scream echoes from the east wing. When the candles are relit, the victim is found.",
+        "involvedCharacterIds": ["char-001", "char-002"]
+      },
+      {
+        "order": 3,
+        "title": "Interrogations",
+        "narrative": "Inspector Hargrove questions each guest one by one. Contradictions surface. Alibis crumble.",
+        "involvedCharacterIds": ["char-003"]
+      }
+    ]
+  },
+  {
+    "id": "story-002",
+    "title": "The 8:15 to Vienna",
+    "description": "The overnight express from Paris to Vienna is no stranger to secrets — but tonight it carries something darker. A passenger is found dead in a locked compartment somewhere past the Swiss border. The train cannot stop. The killer cannot escape. And as the hours tick by, every alibi begins to unravel.",
+    "difficulty": "HARD",
+    "characters": [
+      {
+        "id": "char-101",
+        "name": "Madame Voss",
+        "role": "Passenger",
+        "description": "A retired opera singer travelling alone. She claims she heard nothing.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-102",
+        "name": "Dr. Emil Rast",
+        "role": "Passenger",
+        "description": "A physician with a nervous disposition. He was the first to declare the victim dead.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-103",
+        "name": "The Conductor",
+        "role": "Staff",
+        "description": "Responsible for the entire train. He insists no one boarded or left since departure.",
+        "imagePath": null,
+        "isSuspect": false
+      }
+    ],
+    "chapters": [
+      {
+        "order": 1,
+        "title": "All Aboard",
+        "narrative": "The 8:15 departs under a grey sky. Passengers settle in, unaware not everyone will reach the final destination.",
+        "involvedCharacterIds": ["char-101", "char-102", "char-103"]
+      },
+      {
+        "order": 2,
+        "title": "The Locked Compartment",
+        "narrative": "A porter notices the compartment has been locked for hours. When forced open, a grim discovery awaits.",
+        "involvedCharacterIds": ["char-102", "char-103"]
+      },
+      {
+        "order": 3,
+        "title": "Nowhere to Run",
+        "narrative": "With the train still moving and the killer among them, passengers grow suspicious of one another.",
+        "involvedCharacterIds": ["char-101", "char-102"]
+      }
+    ]
+  },
+  {
+    "id": "story-003",
+    "title": "The Last Exhibit",
+    "description": "The grand reopening of the Havelock Museum was meant to be a celebration — a night of champagne, ancient artefacts, and press photographers. But when the lights cut out during the unveiling of a priceless Roman dagger, the curator is found dead beside the empty display case. The weapon is missing. The murderer is among the guests. And the museum's cameras have been disabled.",
+    "difficulty": "EASY",
+    "characters": [
+      {
+        "id": "char-201",
+        "name": "Director Havelock",
+        "role": "Host",
+        "description": "The ambitious museum director who staked his reputation on tonight's exhibit. He seems more shaken by the missing dagger than by the body.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-202",
+        "name": "Clara Venn",
+        "role": "Journalist",
+        "description": "A sharp-eyed reporter who arrived early and stayed late. She was seen near the exhibit room just before the lights went out.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-203",
+        "name": "Otto Braun",
+        "role": "Security Guard",
+        "description": "The museum's head of security. He claims he was doing rounds on the ground floor all evening — but no one can confirm it.",
+        "imagePath": null,
+        "isSuspect": true
+      },
+      {
+        "id": "char-204",
+        "name": "Detective Serrano",
+        "role": "Detective",
+        "description": "Called in from the city precinct, Serrano is methodical and calm. She trusts evidence over instinct.",
+        "imagePath": null,
+        "isSuspect": false
+      }
+    ],
+    "chapters": [
+      {
+        "order": 1,
+        "title": "Opening Night",
+        "narrative": "Guests mingle beneath ancient artefacts. The mood is celebratory — but one attendee has very different plans for the evening.",
+        "involvedCharacterIds": ["char-201", "char-202", "char-203", "char-204"]
+      },
+      {
+        "order": 2,
+        "title": "Lights Out",
+        "narrative": "The unveiling begins. The room goes dark. When power is restored, the dagger is gone and the curator is on the floor.",
+        "involvedCharacterIds": ["char-201", "char-202", "char-203"]
+      },
+      {
+        "order": 3,
+        "title": "The Empty Case",
+        "narrative": "Detective Serrano seals the museum and begins her interviews. Every suspect has a motive. None have a clean alibi.",
+        "involvedCharacterIds": ["char-204"]
+      }
+    ]
+  }
+]
